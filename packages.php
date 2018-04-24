@@ -1,6 +1,8 @@
 <?php 
 
-include '../partials/head.php';
+include 'app/partials/head.php';
+
+component_banner("Packages for Any Size");
 
 $content = [
     'We cover all bookkeeping basics and financial reporting for you',
@@ -46,8 +48,8 @@ packages_component(
     $includes
 );
 
-include '../partials/contact.php';
+include 'app/partials/contact.php';
 
-include '../partials/footer.php';
+include 'app/partials/footer.php';
 
 ?>
