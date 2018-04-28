@@ -14,7 +14,7 @@
     <div class="row justify-content-md-center">
         <div class="text-center col-md-4">
             <div class="home__headshot">
-                <img src="assets/img/home-mary.jpg" class="home__headshot__img" alt="Mary">
+                <img src="assets/img/home-mary.JPG" class="home__headshot__img" alt="Mary">
             </div>
         </div>
         <div class="col-md-4 align-self-center">
@@ -81,29 +81,23 @@
     <div class="row justify-content-md-center text-center" style="margin-bottom: 2rem">
         <div class="col-sm-2">
             <img src="assets/img/logo-xero.png" class="home__logo" alt="XERO">
-            <p>XERO</p>
         </div>
         <div class="col-sm-2">
             <img src="assets/img/logo-myob.png" class="home__logo" alt="MYOB">
-            <p>MYOB</p>
         </div>
         <div class="col-sm-2">
             <img src="assets/img/logo-receiptbank.png" class="home__logo" alt="Receipt-Bank">
-            <p>Receipt-Bank</p>
         </div>
     </div>
     <div class="row justify-content-md-center text-center" style="margin-bottom: 2rem">
         <div class="col-sm-2">
             <img src="assets/img/logo-cloudpayroll.png" class="home__logo" alt="Cloud Payroll">
-            <p>Cloud Payroll</p>
         </div>
         <div class="col-sm-2">
             <img src="assets/img/logo-hubdoc.png" class="home__logo" alt="Hubdoc">
-            <p>Hubdoc</p>
         </div>
         <div class="col-sm-2">
             <img src="assets/img/logo-futrli.png" class="home__logo" alt="Futrli">
-            <p>Futrli</p>
         </div>
     </div>
 </div>
