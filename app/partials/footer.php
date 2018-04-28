@@ -1,5 +1,78 @@
         <footer>
-            tehe
+            <div class="container">
+                <div class="footer__menu row">
+                    <div class="footer__menu__column">
+                        <?php
+                        $title = "Quicklinks";
+
+                        $links = [
+                            array(
+                                "name"=>"Home",
+                                "url"=>"index.php"
+                            ),
+                            array(
+                                "name"=>"Packages",
+                                "url"=>"Packages.php"
+                            ),
+                            array(
+                                "name"=>"About Us",
+                                "url"=>"about-us.php"
+                            ),
+                            array(
+                                "name"=>"Contact",
+                                "url"=>"contact-us.php"
+                            ),
+                        ];
+
+                        component_footer_menu($title, $links);
+                        ?>
+                    </div>
+                    <div class="footer__menu__column">
+                        <?php
+                        $title = "Socials";
+
+                        $links = [
+                            array(
+                                "name"=>"Facebook",
+                                "url"=>"http://www.facebook.com"
+                            ),
+                            array(
+                                "name"=>"Instagram",
+                                "url"=>"http://www.instagram.com"
+                            ),
+                            array(
+                                "name"=>"Twitter",
+                                "url"=>"http://www.twitter.com"
+                            ),
+                        ];
+
+                        component_footer_menu($title, $links);
+                        ?>
+                    </div>
+                    <div class="footer__menu__column">
+                        <?php
+                        $title = "Contact";
+
+                        $links = [
+                            array(
+                                "name"=>"02 5555 5555",
+                                "url"=>""
+                            ),
+                            array(
+                                "name"=>"0455 555 555",
+                                "url"=>""
+                            ),
+                            array(
+                                "name"=>"info@wiseup.com.au",
+                                "url"=>""
+                            ),
+                        ];
+
+                        component_footer_menu($title, $links);
+                        ?>
+                    </div>
+                </div>
+            </div>
         </footer>
 
         <!-- Optional JavaScript -->

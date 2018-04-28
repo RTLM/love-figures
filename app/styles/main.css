@@ -252,3 +252,36 @@ p {
 .testimonials .carousel-indicators .active {
     background-color: #84497e;
 }
+
+footer {
+    padding: 2rem 0;
+    background-color: #565454;
+    color: white;
+}
+
+.footer__menu__column {
+    display: flex;
+    flex: 1 1 33.33%;
+    justify-content: center;
+}
+
+.footer__menu__column ul {
+    list-style: none;
+}
+
+.footer__menu__item__title {
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.footer__menu__item__links {
+    padding-bottom: 1rem;
+}
+
+.footer__menu__item__links a {
+    color: white;
+}
+
+.footer__menu__item__links a:hover {
+    color: #b08cb9;
+}

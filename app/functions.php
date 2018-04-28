@@ -23,4 +23,8 @@ function component_testimonial($testimonial, $name) {
     include 'partials/testimonial.php';
 }
 
+function component_footer_menu($title, $links) {
+    include 'partials/footer-menu.php';
+}
+
 ?>
