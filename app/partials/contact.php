@@ -1,4 +1,4 @@
-<div class="container">
+<div class="contact container global__padding">
     <h1 class="text-center">Inquire Today</h1>
     <div class="container row justify-content-sm-center">
         <form class="col-sm-8">
@@ -16,7 +16,7 @@
             <div class="form-group">
                  <textarea class="form-control" rows="5" id="message" placeholder="Leave your message"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </div>
 </div>

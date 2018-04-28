@@ -1,3 +1,16 @@
+h1 {
+    color: #84497e;
+}
+
+p {
+    color: #565454;
+}
+
+.global__padding {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 .navbar {
     padding: 0rem;
     justify-content: center;
@@ -32,7 +45,7 @@
 }
 
 .nav-link {
-    color: #959494;
+    color: #565454;
     font-weight: 600;
     padding: 2rem 0.5rem;
 
@@ -44,24 +57,24 @@
 
 .banner {
     position: relative;
-    text-align: center;
 }
 
 .banner__text {
     display: flex;
     left: 50%;
     position: absolute;
-    text-align: left;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-.banner__text > h1 {
-    flex: 0 1 60%;
+.banner__home h1 {
+    flex: 0 1 50%;
+    color: white;
 }
 
 .banner__home {
     color: white;
+    text-align: left;
 }
 
 .banner__home__title {
@@ -73,6 +86,109 @@
 
 .banner__home__subtitle {
     font-weight: 300;
+}
+
+.banner__home__packages {
+    text-align: center;
+}
+
+.banner__home__packages .banner__text {
+    justify-content: center;
+}
+
+.banner__home__packages img {
+    filter: brightness(0.80);
+}
+
+.banner__home__packages h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.banner__home__packages a {
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+
+    -webkit-transition:200ms ease-in-out;
+    -moz-transition:200ms ease-in-out;
+    -o-transition:200ms ease-in-out;
+    transition:200ms ease-in-out;
+}
+
+.banner__home__packages a:hover {
+    color: #84497e;
+    text-decoration: none;
+}
+
+.contact h1 {
+    padding-bottom: 1rem;
+}
+
+.contact button {
+    background-color: #b08cb9;
+    border: 2px solid #b08cb9;
+    color: white;
+}
+
+.contact button:hover {
+    background-color: white;
+    color: #b08cb9;
+}
+
+.home__mary h2 {
+    color: #84497e;
+    font-style: italic;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.home__headshot {
+    border-radius: 50%!important;
+    overflow: hidden;
+    padding-top: 70%;
+    position: relative;
+    width: 70%;
+    margin: auto;
+}   
+
+.home__headshot__img {
+    left: -25%;
+    position: absolute;
+    top: -25%;
+    max-width: 150%;
+}
+
+.home__features-list {
+    color: #565454;
+}
+
+.home__features-list svg {
+    color: #4e2149;
+}
+
+.home__services__service {
+    border-radius: .25rem;
+    border: 1px solid #959494;
+    color: #565454;
+    margin: 1rem; 
+    padding: 1rem;
+
+    -webkit-transition:200ms ease-in-out;
+    -moz-transition:200ms ease-in-out;
+    -o-transition:200ms ease-in-out;
+    transition:200ms ease-in-out;
+}
+
+.home__services__service:hover {
+    background-color: #b08cb9;
+    color: white;
+    text-decoration: none;
+}
+
+.testimonials p {
+    text-align: center;
 }
 
 .bg {
@@ -102,4 +218,29 @@
 
 .staff__row {
     padding: 2rem 0rem;
+}
+
+.testimonials .carousel-control-next-icon {
+    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2384497e' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    justify-content: flex-start;
+}
+
+.testimonials .carousel-control-next {
+    justify-content: flex-start;
+}
+
+.testimonials .carousel-control-prev-icon {
+    background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%2384497e' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.testimonials .carousel-control-prev {
+    justify-content: flex-end;
+}
+
+.testimonials .carousel-indicators li {
+    background-color: #b08cb9;
+}
+
+.testimonials .carousel-indicators .active {
+    background-color: #84497e;
 }
