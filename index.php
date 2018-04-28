@@ -102,40 +102,44 @@
     </div>
 </div>
 
-<div id="carouselExampleIndicators" class="testimonials carousel slide" data-ride="carousel">
+<div id="testimonialsCarousel" class="testimonials carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#testimonialsCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#testimonialsCarousel" data-slide-to="1"></li>
+        <li data-target="#testimonialsCarousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner" style="background-color:#f1f1f1;">
-        <div class="row justify-content-sm-center text-center carousel-item active">
-            <div class="col-sm-8 padding">
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut enim sit amet tellus eleifend pellentesque. Curabitur eget lacus at erat cursus tristique. Etiam lorem nisi, auctor non eleifend in, ultricies id urna. In ut elit tortor. Proin venenatis quis sapien nec posuere. Nullam malesuada eget orci sed molestie.""
-                </p>
-            </div>
+        <div class="carousel-item active">
+            <?php component_testimonial(
+                "Whatever the size of your business, Mary provides that personal touch ensuring you are receiving both the very best information and service you require. Mary's professionalism is second to none and her ability to listen to and understand any concerns or issues you may have is a true gift. I strongly recommend you use Mary and Wiseup to take care of your bookkeeping needs as the reward is absolute peace of mind that your business is in excellent hands.",
+                "Michelle from HRBear"
+                ) 
+            ?>
         </div>
         <div class="carousel-item">
-            <div class="col-sm-8 padding">
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut enim sit amet tellus eleifend pellentesque. Curabitur eget lacus at erat cursus tristique. Etiam lorem nisi, auctor non eleifend in, ultricies id urna. In ut elit tortor. Proin venenatis quis sapien nec posuere. Nullam malesuada eget orci sed molestie.""
-                </p>
-            </div>
+            <?php component_testimonial(
+                "I have been using Mary at Wiseup for coming up to 10 years now for our real estate business. When I first purchased the business, I had zero understanding of the financial side of running a business. I honestly believe without Mary I would have got myself into strife.
+ 
+                    Mary took control of my finances, allowing me to focus on the day to day running of the business. Mary is constantly looking for better ways and always trying to streamline our business to be more productive and cost efficient. I have no hesitation in recommending Mary and Wiseup.",
+                "Dale from the First National Burleigh"
+                ) 
+            ?>
         </div>
         <div class="carousel-item">
-            <div class="col-sm-8 padding">
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ut enim sit amet tellus eleifend pellentesque. Curabitur eget lacus at erat cursus tristique. Etiam lorem nisi, auctor non eleifend in, ultricies id urna. In ut elit tortor. Proin venenatis quis sapien nec posuere. Nullam malesuada eget orci sed molestie.""
-                </p>
-            </div>
+            <?php component_testimonial(
+                "Despite thinking that I ‘knew’ what I was doing, when Mary got her hands on my MYOB accounting system, I was in for a few surprises! Thankfully the process of transforming my accounts from the ‘dark ages’ to bring it into the 21st Century is now a distant memory. With her skill and know-how, we set up what is now a really user-friendly process that means my accounts and banking are always up-to-date with least effort on my part.
+
+                    If I could duplicate Mary for other aspects of my business administration I’d be delighted. She is trustworthy, competent and delivers quality service with a smile, three big pluses in today’s world.",
+                "Diane from Positive Relating"
+                ) 
+            ?>
         </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>

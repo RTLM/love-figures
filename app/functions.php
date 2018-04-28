@@ -19,6 +19,8 @@ function component_icon_grid($title, $icons) {
     include 'partials/icon-grid.php';
 }
 
-
+function component_testimonial($testimonial, $name) {
+    include 'partials/testimonial.php';
+}
 
 ?>
