@@ -2,7 +2,7 @@
 
 
 <div class="banner__home">
-    <?php component_banner("<span class='banner__home__title'>Learn To Love Your Figures</span><br><span class='banner__home__subtitle'>with Wiseup", "home-hero") ?>
+    <?php component_banner("<span class='banner__home__title'>Learn To Love Your Figures</span><br><span class='banner__home__subtitle'>with Wiseup", "home-hero.png") ?>
 </div>
 
 <div class="container">
