@@ -1,6 +1,9 @@
 <?php include 'app/partials/head.php'; ?>
 
-<?php component_banner("Learn To Love Your Figures") ?>
+
+<div class="banner__home">
+    <?php component_banner("<span class='banner__home__title'>Learn To Love Your Figures</span><br><span class='banner__home__subtitle'>with Wiseup", "home-hero") ?>
+</div>
 
 <div class="container">
     <div class="text-center row justify-content-md-center">

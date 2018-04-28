@@ -7,7 +7,7 @@ function staff_component($name, $position) {
     include 'partials/staff.php';
 }
 
-function component_banner($title) {
+function component_banner($title, $image) {
     include 'partials/banner.php';
 }
 
