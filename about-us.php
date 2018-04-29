@@ -6,12 +6,12 @@
 
 <div class="container">
     <div class="row staff__row justify-content-sm-center">
-        <?php component_staff('Mary Brock', 'Director', 'home-mary.jpg'); ?>
-        <?php component_staff('Sue Green', 'Operations Manager', 'home-mary.jpg'); ?>
+        <?php component_staff('Mary Brock', 'Director', 'home-mary.JPG'); ?>
+        <?php component_staff('Sue Green', 'Operations Manager', 'home-mary.JPG'); ?>
     </div>
     <div class="row staff__row justify-content-sm-center">
-        <?php component_staff('Megan Keesse', 'VA Bookkeeping', 'home-mary.jpg'); ?>
-        <?php component_staff('Alexa Ursula Conopio', 'VA Bookkeeping', 'home-mary.jpg'); ?>
+        <?php component_staff('Megan Keesse', 'VA Bookkeeping', 'home-mary.JPG'); ?>
+        <?php component_staff('Alexa Ursula Conopio', 'VA Bookkeeping', 'home-mary.JPG'); ?>
     </div>
 </div>
 
