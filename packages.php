@@ -2,7 +2,13 @@
 
 include 'app/partials/head.php';
 
-component_banner("Packages for Any Size");
+?>
+
+<div class="banner__packages">
+    <?php component_banner("Packages for Any Size", "packages-hero.png"); ?>
+</div>
+
+<?php
 
 $content = [
     'We cover all bookkeeping basics and financial reporting for you',
@@ -17,10 +23,12 @@ $includes = [
     'Financial Reporting',
     'Unlimited phone support',
 ];
-packages_component(
+component_package(
     'Package 1',
     '$249',
+    'package-1.png',
     $content,
+    'Includes',
     $includes
 );
 
@@ -29,10 +37,12 @@ $content = [
     'Need extra content for this point so that we keep a consistent 3 dash formula', 
     'Perfect for Small Businesses struggling to keep up with transactions and compliance'
 ];
-packages_component(
+component_package(
     'Package 2',
     '$449',
+    'package-2.png',
     $content,
+    'Includes above package plus',
     $includes
 );
 
@@ -41,10 +51,12 @@ $content = [
     'Saving time, money and resources through Monthly Management Insights Reporting', 
     'Perfect for Small-Medium size businesses with Bookkeeping, Payroll and Payroll tax taken care of'
 ];
-packages_component(
+component_package(
     'Package 3',
     '$799',
+    'package-3.png',
     $content,
+    'Includes above packages plus',
     $includes
 );
 

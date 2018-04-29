@@ -1,6 +1,8 @@
 <?php include 'app/partials/head.php'; ?>
 
-<?php component_banner("Contact Us"); ?>
+<div class="banner__packages">
+    <?php component_banner("Contact Us", "packages-hero.png"); ?>
+</div>
 
 <?php include 'app/partials/contact.php'; ?>
 

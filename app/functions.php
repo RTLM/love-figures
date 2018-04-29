@@ -1,9 +1,9 @@
 <?php 
-function packages_component($title, $price, $content, $includes) {
+function component_package($title, $price, $image, $content, $subtitle, $includes) {
     include 'partials/package.php';
 }
 
-function staff_component($name, $position) {
+function component_staff($name, $position, $image) {
     include 'partials/staff.php';
 }
 
