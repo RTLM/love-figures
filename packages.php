@@ -24,7 +24,7 @@ $includes = [
     'Unlimited phone support',
 ];
 component_package(
-    'Package 1',
+    'Fledgling',
     '$249',
     'package-1.png',
     $content,
@@ -38,7 +38,7 @@ $content = [
     'Perfect for Small Businesses struggling to keep up with transactions and compliance'
 ];
 component_package(
-    'Package 2',
+    'Scout',
     '$449',
     'package-2.png',
     $content,
@@ -52,7 +52,7 @@ $content = [
     'Perfect for Small-Medium size businesses with Bookkeeping, Payroll and Payroll tax taken care of'
 ];
 component_package(
-    'Package 3',
+    'Hunter',
     '$799',
     'package-3.png',
     $content,

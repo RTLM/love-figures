@@ -1,4 +1,4 @@
-<div class="col-md-4">
+<div class="col-lg-4">
     <div class="card-flip mx-auto">
         <div class="flip">
             <div class="front">
