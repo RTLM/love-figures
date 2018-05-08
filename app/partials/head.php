@@ -17,25 +17,40 @@
         <title>Learn to Love Your Figures</title>
     </head>
     <body>
+        <?php
+            $url = "/love-figures";
+
+            $navItems = [
+                array(
+                    "name"=>"Home",
+                    "url"=>"/"
+                ),
+                array(
+                    "name"=>"Packages",
+                    "url"=>"/packages"
+                ),
+                array(
+                    "name"=>"About Us",
+                    "url"=>"/about-us"
+                ),
+                array(
+                    "name"=>"Contact",
+                    "url"=>"/contact-us"
+                ),
+            ];
+        ?>
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse text-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <a href="index.php" class="navbar__logo"><img src="assets/img/logo.png"></a>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
+                    <a href="/" class="navbar__logo"><img src="assets/img/logo.png"></a>
+                    <?php foreach($navItems as $item) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="packages.php">Packages</a>
+                        <a class="nav-link" href="<?php echo ($url . $item['url']) ?>"><?php echo $item['name'] ?></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about-us.php">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact-us.php">Contact</a>
-                    </li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
