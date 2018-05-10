@@ -45,26 +45,26 @@
         <h1>Our Services</h1>
     </div>
     <div class="row justify-content-md-center text-center">
-        <a href="packages.php" class="home__services__service col-sm-4">
+        <a href="/packages" class="home__services__service col-sm-4">
             Virtual Bookkeping and BAS
         </a>
-        <a href="packages.php" class="home__services__service col-sm-4">
+        <a href="/packages" class="home__services__service col-sm-4">
             Business Consulting & Analysis
         </a>
     </div>
     <div class="row justify-content-md-center text-center">
-        <a href="packages.php" class="home__services__service col-sm-4">
+        <a href="packages" class="home__services__service col-sm-4">
             Virtual CFO & COO
         </a>
-        <a href="packages.php" class="home__services__service col-sm-4">
+        <a href="/packages" class="home__services__service col-sm-4">
             Virtual Administrative Support
         </a>
     </div>
     <div class="row justify-content-md-center text-center">
-        <a href="packages.php" class="home__services__service col-sm-4">
+        <a href="/packages" class="home__services__service col-sm-4">
             Integrations Analysis & Implementation
         </a>
-        <a href="packages.php" class="home__services__service col-sm-4">
+        <a href="/packages" class="home__services__service col-sm-4">
             Financial Reporting & Analysis
         </a>
     </div>

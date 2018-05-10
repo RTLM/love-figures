@@ -3,7 +3,7 @@ function component_package($title, $price, $image, $content, $subtitle, $include
     include 'partials/package.php';
 }
 
-function component_staff($name, $position, $image) {
+function component_staff($name, $position, $image, $bio) {
     include 'partials/staff.php';
 }
 

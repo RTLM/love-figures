@@ -34,15 +34,15 @@
                         $links = [
                             array(
                                 "name"=>"Facebook",
-                                "url"=>"http://www.facebook.com"
+                                "url"=>"http://www.facebook.com/wiseupconnect"
                             ),
                             array(
                                 "name"=>"Instagram",
-                                "url"=>"http://www.instagram.com"
+                                "url"=>"http://www.instagram.com/wiseupconnect"
                             ),
                             array(
                                 "name"=>"Twitter",
-                                "url"=>"http://www.twitter.com"
+                                "url"=>"http://www.twitter.com/wiseupconnect"
                             ),
                         ];
 
@@ -55,16 +55,12 @@
 
                         $links = [
                             array(
-                                "name"=>"02 5555 5555",
-                                "url"=>""
+                                "name"=>"0412 325 660",
+                                "url"=>"tel:+61412-325-660"
                             ),
                             array(
-                                "name"=>"0455 555 555",
-                                "url"=>""
-                            ),
-                            array(
-                                "name"=>"info@wiseup.com.au",
-                                "url"=>""
+                                "name"=>"bookkeeping@wiseupconnect.com.au",
+                                "url"=>"mailto:bookkeeping@wiseupconnect.com.au"
                             ),
                         ];
 
