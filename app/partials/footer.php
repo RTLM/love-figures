@@ -8,19 +8,19 @@
                         $links = [
                             array(
                                 "name"=>"Home",
-                                "url"=>"index.php"
+                                "url"=>"/"
                             ),
                             array(
                                 "name"=>"Packages",
-                                "url"=>"Packages.php"
+                                "url"=>"/packages"
                             ),
                             array(
                                 "name"=>"About Us",
-                                "url"=>"about-us.php"
+                                "url"=>"/about-us"
                             ),
                             array(
                                 "name"=>"Contact",
-                                "url"=>"contact-us.php"
+                                "url"=>"/contact-us"
                             ),
                         ];
 
