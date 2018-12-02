@@ -1,12 +1,11 @@
-<div class="container">
-    <div class="text-center">
-        <h1><?php echo $title ?></h1>
+<div class="icon-grid container">
+    <div class="icon-grid__heading">
+        <h2><?php echo $title ?></h2>
     </div>
-    <div class="row justify-content-md-center text-center" style="margin-bottom: 2rem">
-        <?php foreach ($icons as $item) { ?>
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <i class="fas fa-check" style="font-size: 3rem; margin: 1rem;"></i><br>
-                <?php echo $item; ?>
+    <div class="icon-grid__row" style="margin-bottom: 2rem">
+        <?php foreach ($icons as $name => $image) { ?>
+            <div class="icon-grid__column">
+                <img class="icon-grid__image" src="app/dist/images/<?php echo $image ?>" alt="<?php echo $name; ?>">
             </div>
         <?php } ?>
     </div>

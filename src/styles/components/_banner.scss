@@ -1,0 +1,67 @@
+.banner {
+    color: white;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-top: 58px;
+
+    &--contact {
+        background-image: linear-gradient(to right, #ff4343, #ff43e1);
+    }
+
+    &--about-us {
+        background-image: linear-gradient(to right, #373fff, #a143ff);
+    }
+
+    &--packages {
+        background-image: linear-gradient(to right, #373fff, #00fff0);
+    }
+
+    &--overlay {
+        background-color: white;
+        display: none;
+        position: absolute;
+        bottom: 0;
+        height: 310px;
+        transform: translateY(100%) rotate(-8deg);
+        transform-origin: top left;
+        width: 105%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        height: 700px;
+        padding-top: 72px;
+        padding-bottom: 150px;
+
+        &--overlay {
+            display: block;
+        }
+    }
+}
+
+.banner__text {
+    text-align: center;
+
+    h1 {
+        font-weight: 400;
+        font-size: 32px;
+    }
+
+    p {
+        margin-top: 40px;
+        display: none;
+    }
+
+    @include media-breakpoint-up(lg) {
+        p {
+            display: block;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+    }
+}

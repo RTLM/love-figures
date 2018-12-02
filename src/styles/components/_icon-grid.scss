@@ -1,0 +1,32 @@
+.icon-grid {
+    margin-bottom: 64px;
+    margin-top: 64px;
+}
+
+.icon-grid__heading {
+    text-align: center;
+    color: $purple;
+    margin-bottom: 64px;
+}
+
+.icon-grid__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.icon-grid__column {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+    flex: 1 1 100%;
+
+    @include media-breakpoint-up(sm) {
+        flex: 1 1 50%;
+    }
+
+    @include media-breakpoint-up(lg) {
+        flex: 1 1 25%;
+        margin-bottom: 0;
+    }
+}

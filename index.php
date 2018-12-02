@@ -2,10 +2,12 @@
 define( 'INCLUDE_DIR', dirname( __FILE__ ) . '/app/pages/' );
 
 $rules = array( 
-    'about-us'   => "/about-us",
-    'contact-us' => "/contact-us",
-    'packages'   => "/packages",
-    'home'       => "/"
+    'terms-and-conditions'  => '/terms-and-conditions',
+    'thank-you'             => '/thank-you',
+    'about-us'              => "/about-us",
+    'contact-us'            => "/contact-us",
+    'packages'              => "/packages",
+    'home'                  => "/"
 );
 
 $uri = rtrim( dirname($_SERVER["SCRIPT_NAME"]), '/' );
@@ -25,6 +27,6 @@ foreach ( $rules as $action => $rule ) {
 }
 
 // nothing is found so handle the 404 error
-include( INCLUDE_DIR . '404.php' );
+include( INCLUDE_DIR . 'home.php' );
 
 ?>

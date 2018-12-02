@@ -1,0 +1,61 @@
+.contact button {
+    background-image: linear-gradient(to left, #ff4343, #ff43e1);
+    color: white;
+    font-size: 14px;
+    padding: 14px 0;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.contact button:hover {
+    filter: brightness(90%);
+}
+
+.contact {
+    margin-bottom: 32px;
+    margin-top: 32px;
+
+    .row {
+        justify-content: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+        margin-top: 0;
+        transform: translateY(-250px);
+    }
+}
+
+.contact__phone-number__container {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 14px;
+    filter: drop-shadow(-1px 2px 15px rgba(0, 0, 0, 0.18));
+
+    a {
+        color: #959494;
+    }
+}
+
+.contact__form__container {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    padding: 30px 20px;
+    filter: drop-shadow(-1px 2px 15px rgba(0, 0, 0, 0.18));
+
+    input,
+    textarea {
+        color: #959494;
+        border-radius: 8px;
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        padding: 30px 40px;
+    }
+}

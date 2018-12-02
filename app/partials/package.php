@@ -1,43 +1,27 @@
-<div class="container">
-    <div class="package">
-        <div class="row justify-content-md-center">
-            <div class="col-md-3">
-                <div class="package__image text-center">
-                    <img src="assets/img/<?php echo $image; ?>" class="img-fluid rounded-circle mx-auto" alt="<?php echo $title ?>">
-                </div>
-                <div class="package__image__text">
-                    <p>from</p>
-                    <h1><?php echo $price; ?></h1>
-                    <p><b>per month + GST </b></p>
-                </div>
-            </div>
-            <div class="col-md-5 align-self-center">
-                <h1><?php echo $title ?></h1>
-                <ul class="package__list">
-                    <?php foreach ($content as $item) { ?>
-                        <li>
-                            <?php echo $item ?>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
+<div class="package">
+    <div class="package__header">
+        <img src="app/dist/images/<?php echo $image; ?>" class="img-fluid rounded-circle mx-auto package__image" alt="<?php echo $title ?>">
+        <p class="package__title color--<?php echo $colour ?>"><?php echo $title ?></p>
+        <div class="package__price">
+            <p><?php echo $price; ?></p>
+            <p>starting from; per month</p>
         </div>
-        <div class="row justify-content-md-center">
-            <div class="package__includes__title col-md-8">
-                <p><?php echo $subtitle ?></p>
-            </div>
-        </div>
-        <div class="row justify-content-md-center">
-            <div class="package__includes__list col-md-8">
-            <?php foreach ($includes as $item) { ?>
-                <div class="package__includes__list__item">
-                    <i class="far fa-check-circle"></i>
-                    <p>
-                        <?php echo $item ?>
-                    </p>
+        <a href="/contact-us" class="btn package__button package__button--<?php echo $colour ?>">Enquire</a>
+    </div>
+    <div class="package__features">
+        <div class="package__timeframes">
+            <?php foreach ($timeframe as $item) { ?>
+                <div class="package__feature">
+                    <i class="fas fa-check color--<?php echo $colour ?>" style="font-size: 1.5rem; margin: 1rem;"></i>
+                    <p><?php echo $item; ?></p>
                 </div>
             <?php } ?>
-            </div>
         </div>
+        <?php foreach ($features as $feature) { ?>
+            <div class="package__feature">
+                <i class="fas fa-check color--<?php echo $colour ?>" style="font-size: 1.5rem; margin: 1rem;"></i>
+                <p><?php echo $feature; ?></p>
+            </div>
+        <?php } ?>
     </div>
 </div>

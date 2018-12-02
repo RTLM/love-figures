@@ -1,0 +1,47 @@
+.tiles {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+
+    @include media-breakpoint-up(sm) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 88px 120px;
+    }
+}
+
+.tile__icon {
+    margin-bottom: 24px;
+
+    > svg {
+        height: 85px;
+
+        > * {
+            stroke: $svg-stroke;
+        }
+
+        .a {
+            stroke-width: 1px;
+        }
+    }
+}
+
+.tile {
+    &:nth-child(1) {
+        .tile__heading {}
+    }
+
+    &:nth-child(2) {}
+
+    &:nth-child(3) {}
+
+    &:nth-child(4) {}
+
+    &:nth-child(5) {}
+
+    &:nth-child(6) {}
+}

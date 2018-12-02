@@ -1,0 +1,250 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-weight: 300;
+}
+
+.global__padding {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+
+/* .banner__text {
+    display: flex;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner__home h1 {
+    flex: 0 1 50%;
+    color: white;
+}
+
+.banner__home {
+    color: white;
+    text-align: left;
+}
+
+.banner__home__title {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
+
+.banner__home__subtitle {
+    font-weight: 300;
+}
+
+.banner__home__packages {
+    text-align: center;
+}
+
+.banner__home__packages .banner__text {
+    justify-content: center;
+}
+
+.banner__home__packages img {
+    filter: brightness(0.80);
+}
+
+.banner__home__packages h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.banner__home__packages a {
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+
+    -webkit-transition:200ms ease-in-out;
+    -moz-transition:200ms ease-in-out;
+    -o-transition:200ms ease-in-out;
+    transition:200ms ease-in-out;
+}
+
+.banner__home__packages a:hover {
+    color: #84497e;
+    text-decoration: none;
+}
+
+.banner__packages .banner__text {
+    justify-content: center;
+}
+
+.banner__packages h1 {
+    color: white;
+}
+
+.banner__packages img {
+    filter: brightness(0.80);
+}
+
+.banner__about-us img {
+    filter: brightness(0.50);
+}
+
+.banner__about-us h1 {
+    color: white;
+    text-align: center;
+}
+
+.banner__about-us h1::before {
+    content: '"';
+}
+
+.banner__about-us h1::after {
+    content: '"';
+} */
+
+.home__headshot {
+    border-radius: 50%!important;
+    overflow: hidden;
+    padding-top: 100%;
+    position: relative;
+    margin: auto;
+}   
+
+.home__headshot__img {
+    left: -25%;
+    position: absolute;
+    top: -25%;
+    max-width: 150%;
+}
+
+.home__bas__img {
+    left: 65%;
+    position: absolute;
+    top: 0%;
+    width: 100px;
+}
+
+.home__features-list {
+    color: #565454;
+}
+
+.home__features-list svg {
+    color: #4e2149;
+}
+
+.home__services__service {
+    border-radius: .25rem;
+    border: 1px solid #959494;
+    color: #565454;
+    margin: 1rem; 
+    padding: 1rem;
+
+    -webkit-transition:200ms ease-in-out;
+    -moz-transition:200ms ease-in-out;
+    -o-transition:200ms ease-in-out;
+    transition:200ms ease-in-out;
+}
+
+.home__services__service:hover {
+    background-color: #b08cb9;
+    color: white;
+    text-decoration: none;
+}
+
+.testimonials .testimonials__testimonial {
+    text-align: center;
+}
+
+.testimonials .testimonials__testimonial__name {
+    text-align: right;
+    font-style: italic;
+}
+
+.bg {
+    background: url('http://via.placeholder.com/2000x250') no-repeat center center;
+    position: fixed;
+    width: 100%;
+    height: 350px; 
+    top:0;
+    left:0;
+    z-index: -1;
+}
+
+.padding {
+    padding: 4rem 2rem;
+    margin: auto;
+}
+
+.separator {
+    padding: 1rem 0;
+}
+
+.heading {
+    text-align: center;
+    width: 100%;
+}
+
+.privacy__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.privacy__link {
+    color: #b08cb9;
+}
+
+.privacy__link:hover {
+    color: #592253;
+}
+
+.card-flip {
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.card-flip,
+.front,
+.back {
+    max-width: 100%;
+    width: 360px;
+    height: 28rem;
+}
+
+.flip {
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card-flip:hover .flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.back .card-body {
+    background-color: #b08cb9;
+    color: white;
+    font-weight: 300;
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+.testimonial {
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.testimonial__row {
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(lg) {
+        flex-wrap: nowrap;
+    }
+}
+
+.testimonial__item {
+    padding: 30px;
+    flex: 1 1 100%;
+    margin: 0 30px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 25px #ebebeb;
+    overflow: hidden;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-up(lg) {
+        flex: 1 1 33%;
+        margin-bottom: 0;
+    }
+}
+
+.testimonial__header {
+    display: flex;
+    margin-bottom: 16px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.testimonial__details {
+    margin-left: 8px;
+}
+
+.testimonial__name {
+    font-size: 32px;
+    margin: 0;
+    line-height: 1;
+}
+
+.testimonial__company {
+    font-style: italic;
+}
+
+.testimonial__body {
+    color: #959494;
+}

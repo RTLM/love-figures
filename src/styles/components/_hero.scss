@@ -1,0 +1,48 @@
+.hero {
+    height: 500px;
+    position: relative;
+
+    @include media-breakpoint-up(md) {
+        height: 600px;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 64px;
+        letter-spacing: 1px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 72px;
+        }
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 24px;
+        }
+    }
+}
+
+.hero__text {
+    background-image: linear-gradient(to right, rgba($purple, 0.8), rgba($dark-pink, 1));
+    display: flex;
+    align-items: center;
+    color: $white;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.hero__image {
+    height: 100%;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}

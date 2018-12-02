@@ -1,0 +1,18 @@
+.quote-block {
+    background-color: #a143ff;
+    color: $white;
+    padding: 48px 0;
+    margin: 48px 0;
+    text-align: center;
+}
+
+.quote-block__heading {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.quote-block__body {
+    line-height: 2;
+    font-weight: 300;
+}
