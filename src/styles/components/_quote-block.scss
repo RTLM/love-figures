@@ -16,3 +16,11 @@
     line-height: 2;
     font-weight: 300;
 }
+
+.quote-button {
+    margin-top: 16px;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+}

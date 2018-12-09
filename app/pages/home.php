@@ -8,9 +8,11 @@
     <div class="hero__text">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <h1>Learn To Love Your Figures</h1>
-                    <p>with Wiseup Bookkeeping</p>
+                <div class="col-sm-12">
+                    <!-- <h1>Learn To Love Your Figures</h1>
+                    <p>with Wiseup Bookkeeping</p> -->
+                    <h1>Wiseup Bookkeeping</h1>
+                    <p>Learn To Love Your Figures</p>
                 </div>
             </div>
         </div>
@@ -19,7 +21,7 @@
 
 <div class="home__mary container global__padding">
     <div class="row justify-content-md-center">
-        <div class="text-center col-md-4">
+        <div class="home__mary__images text-center col-md-4">
             <div class="home__headshot">
                 <img src="app/dist/images/home-mary.jpg" class="home__headshot__img" alt="Mary">
             </div>
@@ -94,25 +96,23 @@
         <h1>Partnered with</h1>
     </div>
     <div class="row justify-content-md-center text-center" style="margin-bottom: 2rem">
-        <div class="col-sm-2">
-            <img src="assets/img/logo-xero.png" class="home__logo" alt="XERO">
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="app/dist/images/logo-xero.png" class="home__logo" alt="XERO">
         </div>
-        <div class="col-sm-2">
-            <img src="assets/img/logo-myob.png" class="home__logo" alt="MYOB">
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="app/dist/images/logo-myob.png" class="home__logo" alt="MYOB">
         </div>
-        <div class="col-sm-2">
-            <img src="assets/img/logo-receiptbank.png" class="home__logo" alt="Receipt-Bank">
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="app/dist/images/logo-receiptbank.png" class="home__logo" alt="Receipt-Bank">
         </div>
-    </div>
-    <div class="row justify-content-md-center text-center" style="margin-bottom: 2rem">
-        <div class="col-sm-2">
-            <img src="assets/img/logo-cloudpayroll.png" class="home__logo" alt="Cloud Payroll">
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="app/dist/images/logo-cloudpayroll.png" class="home__logo" alt="Cloud Payroll">
         </div>
-        <div class="col-sm-2">
-            <img src="assets/img/logo-hubdoc.png" class="home__logo" alt="Hubdoc">
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="app/dist/images/logo-hubdoc.png" class="home__logo" alt="Hubdoc">
         </div>
-        <div class="col-sm-2">
-            <img src="assets/img/logo-futrli.png" class="home__logo" alt="Futrli">
+        <div class="col-6 col-sm-4 col-md-2">
+            <img src="app/dist/images/logo-futrli.png" class="home__logo" alt="Futrli">
         </div>
     </div>
 </div>
@@ -120,25 +120,21 @@
 <div class="testimonial container">
     <div class="testimonial__row row">
         <?php component_testimonial(
-            "Whatever the size of your business, Mary provides that personal touch ensuring you are receiving both the very best information and service you require. Mary's professionalism is second to none and her ability to listen to and understand any concerns or issues you may have is a true gift. I strongly recommend you use Mary and Wiseup to take care of your bookkeeping needs as the reward is absolute peace of mind that your business is in excellent hands.",
+            "Whatever the size of your business, Mary provides that personal touch ensuring you are receiving both the very best information and service you require. Mary’s professionalism is second to none and her ability to listen to and understand any concerns or issues you may have is a true gift.",
             "Michelle",
             "HRBear",
             "testimonial-hr-bear.jpg"
             ) 
         ?>
         <?php component_testimonial(
-            "I have been using Mary at Wiseup for coming up to 10 years now for our real estate business. When I first purchased the business, I had zero understanding of the financial side of running a business. I honestly believe without Mary I would have got myself into strife.
-
-                Mary took control of my finances, allowing me to focus on the day to day running of the business. Mary is constantly looking for better ways and always trying to streamline our business to be more productive and cost efficient. I have no hesitation in recommending Mary and Wiseup.",
+            "I have been using Mary at Wiseup for nearly 10 years now for our real estate business. Mary took control of my finances, allowing me to focus on the day to day running of the business. Mary is constantly looking for better ways and always trying to streamline our business",
             "Dale",
             "First National Burleigh",
             "testimonial-first-national.jpg"
             ) 
         ?>
         <?php component_testimonial(
-            "Despite thinking that I ‘knew’ what I was doing, when Mary got her hands on my MYOB accounting system, I was in for a few surprises! Thankfully the process of transforming my accounts from the ‘dark ages’ to bring it into the 21st Century is now a distant memory. With her skill and know-how, we set up what is now a really user-friendly process that means my accounts and banking are always up-to-date with least effort on my part.
-
-                If I could duplicate Mary for other aspects of my business administration I’d be delighted. She is trustworthy, competent and delivers quality service with a smile, three big pluses in today’s world.",
+            "With Mary’s skill and know-how, she set up what is now a really user-friendly process that means my accounts and banking are always up-to-date with least effort on my part. If I could duplicate Mary for other aspects of my business administration I’d be delighted!",
             "Diane",
             "Positive Relating",
             "testimonial-positive-relating.jpg"

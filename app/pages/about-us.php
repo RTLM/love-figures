@@ -69,25 +69,21 @@ component_icon_grid("Who We've Helped", $icons);
 <div class="testimonial container">
     <div class="testimonial__row row">
         <?php component_testimonial(
-            "Whatever the size of your business, Mary provides that personal touch ensuring you are receiving both the very best information and service you require. Mary's professionalism is second to none and her ability to listen to and understand any concerns or issues you may have is a true gift. I strongly recommend you use Mary and Wiseup to take care of your bookkeeping needs as the reward is absolute peace of mind that your business is in excellent hands.",
+            "Whatever the size of your business, Mary provides that personal touch ensuring you are receiving both the very best information and service you require. Mary’s professionalism is second to none and her ability to listen to and understand any concerns or issues you may have is a true gift.",
             "Michelle",
             "HRBear",
             "testimonial-hr-bear.jpg"
             ) 
         ?>
         <?php component_testimonial(
-            "I have been using Mary at Wiseup for coming up to 10 years now for our real estate business. When I first purchased the business, I had zero understanding of the financial side of running a business. I honestly believe without Mary I would have got myself into strife.
-
-                Mary took control of my finances, allowing me to focus on the day to day running of the business. Mary is constantly looking for better ways and always trying to streamline our business to be more productive and cost efficient. I have no hesitation in recommending Mary and Wiseup.",
+            "I have been using Mary at Wiseup for nearly 10 years now for our real estate business. Mary took control of my finances, allowing me to focus on the day to day running of the business. Mary is constantly looking for better ways and always trying to streamline our business",
             "Dale",
             "First National Burleigh",
             "testimonial-first-national.jpg"
             ) 
         ?>
         <?php component_testimonial(
-            "Despite thinking that I ‘knew’ what I was doing, when Mary got her hands on my MYOB accounting system, I was in for a few surprises! Thankfully the process of transforming my accounts from the ‘dark ages’ to bring it into the 21st Century is now a distant memory. With her skill and know-how, we set up what is now a really user-friendly process that means my accounts and banking are always up-to-date with least effort on my part.
-
-                If I could duplicate Mary for other aspects of my business administration I’d be delighted. She is trustworthy, competent and delivers quality service with a smile, three big pluses in today’s world.",
+            "With Mary’s skill and know-how, she set up what is now a really user-friendly process that means my accounts and banking are always up-to-date with least effort on my part. If I could duplicate Mary for other aspects of my business administration I’d be delighted!",
             "Diane",
             "Positive Relating",
             "testimonial-positive-relating.jpg"

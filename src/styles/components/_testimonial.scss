@@ -19,10 +19,15 @@
     box-shadow: 1px 1px 25px #ebebeb;
     overflow: hidden;
     margin-bottom: 32px;
+    transition: $transition-base;
 
     @include media-breakpoint-up(lg) {
         flex: 1 1 33%;
         margin-bottom: 0;
+    }
+
+    &:hover {
+        transform: scale(1.1);
     }
 }
 

@@ -4,6 +4,23 @@ $(document).ready(function() {
     $('.carousel').carousel({
         interval: 10000,
     });
+
+    $('#contact-form').submit(function(event) { 
+      // we stoped it
+      event.preventDefault();
+      // needs for recaptacha ready
+      grecaptcha.ready(function() {
+          // do request for recaptcha token
+          // response is promise with passed token
+          grecaptcha.execute('6Lfdp38UAAAAAJUwvPlf-qC3Jfkvy7sN7SoAj6pQ', {action: 'submit_form'}).then(function(token) {
+              // add token to form
+              $('#contact-form').prepend('<input type="hidden" name="token" value="' + token + '">');
+              $('#contact-form').prepend('<input type="hidden" name="action" value="submit_form">');
+              // submit form now
+              $('#contact-form').unbind('submit').submit();
+          });
+      });
+    });
 });
 
  $(window).on('load', function () {

@@ -20,8 +20,10 @@
     &--primary {
         margin-top: 16px;
 
-        .staff__details {
-            margin-left: 44px;
+        @include media-breakpoint-up(md) {
+            .staff__details {
+                margin-left: 44px;
+            }
         }
     }
 

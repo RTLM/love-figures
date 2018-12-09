@@ -1,4 +1,4 @@
-.contact button {
+.contact .btn {
     background-image: linear-gradient(to left, #ff4343, #ff43e1);
     color: white;
     font-size: 14px;
@@ -7,7 +7,7 @@
     border-radius: 8px;
 }
 
-.contact button:hover {
+.contact .btn:hover {
     filter: brightness(90%);
 }
 

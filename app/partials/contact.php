@@ -1,50 +1,13 @@
-<div class="contact container">
-    <div class="col-lg-5 mx-auto col-md-8">
-    <div class="row">
-        <div class="contact__phone-number__container text-center">
-            <a href="tel:+61412325660"><i class="fas fa-phone"></i> +61 412 325 660</a>
-        </div>
-        <div class="contact__form__container">
-            <form id="contact-form" method="post">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name*" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name*" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email*" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" rows="5" name="message" id="message" placeholder="Message*" required></textarea>
-                </div>
-                <button
-                    class="btn"
-                    data-sitekey="6Lf4sWsUAAAAAPsUYcBlgdPk6mNnDswb_Sb41VXA"
-                    data-callback="onSubmit">
-                    Send Message
-                </button>
-            </form>
-        </div>
-        <script src='https://www.google.com/recaptcha/api.js'></script>
-        <script>
-        function onSubmit(token) {
-            document.getElementById("contact-form").submit();
-        }
-        </script>
-    </div>
-    </div>
-</div>
-
 <?php
-$response = $_POST["g-recaptcha-response"];
+if (!empty($_POST)) {
+$token = $_POST['token'];
+$secret = '6Lfdp38UAAAAAChKOWxiMHzWlMhO4nHjLucYu-At';
+$action = $_POST['action'];
+
 $url = 'https://www.google.com/recaptcha/api/siteverify';
 $data = array(
-    'secret' => '6Lf4sWsUAAAAAIlgZtCOtqu8O9rhPKLfLRkPf1t8',
-    'response' => $_POST["g-recaptcha-response"]
+    'secret' => '6Lfdp38UAAAAAChKOWxiMHzWlMhO4nHjLucYu-At',
+    'response' => $_POST['token']
 );
 $options = array(
     'http' => array (
@@ -54,18 +17,19 @@ $options = array(
 );
 $context  = stream_context_create($options);
 $verify = file_get_contents($url, false, $context);
-$captcha_success=json_decode($verify);
+$response = json_decode($verify);
+}
 
-if (!empty($_POST) && $captcha_success->success==true) {
+if (!empty($_POST) && $response->success == true && $response->score > 0.5 && $response->action == 'submit_form') {
     if (!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']) && !empty($_POST['message'])) {
         // Modify the path in the require statement below to refer to the 
         // location of your Composer autoload.php file.
         require __DIR__ . '/../../vendor/autoload.php';
 
-        $adminEmail = 'bookkeeping@wiseupconnect.com.au';
+        // $adminEmail = 'bookkeeping@wiseupconnect.com.au';
+        $adminEmail = 'joshrussellahern@gmail.com';
         $myEmail = 'joshrussellahern@gmail.com';
 
-        // $adminEmail = 'joshrussellahern@gmail.com';
 
         $customerEmail = $_POST['email'];
         $customerName =  $_POST['firstname'] . " " . $_POST['lastname'];
@@ -133,50 +97,7 @@ if (!empty($_POST) && $captcha_success->success==true) {
         // line break.
         $mail->AltBody = "New contact request from: " . $customerEmail . " \r\n" . $message;
 
-        if($mail->send()) {
-            $mail->ClearAddresses();
-            $mail->ClearCCs();
-
-            $mail->addAddress($customerEmail,  $customerName);
-            // $mail->addCC('jackfbrock@hotmail.com',  $customerName);
-
-            $mail->ClearReplyTos();
-            $mail->AddReplyTo($adminEmail, 'Reply to Wiseup Bookkeeping');
-
-            $mail->Subject = $_POST['firstname'] . ' we have received your enquiry';
-
-            $mail->Body = "<p>Hi " . $customerName . ",</p>
-            <p>Thanks for getting in touch with us!</p>
-            <p>I'll get back to you as soon as possible regarding your enquiry.
-            <br>Please don't hesitate to give me a call to reach me sooner.</p>
-            <p>Here is a copy of your message:</p>
-            <p>\"" . $message ."\"</p>
-            <p>Thanks again<p>";
-
-            $mail->AltBody = "Thanks for getting in touch with us! \r\n Here is a copy of your message" . $message;
-
-            if($mail->send()) {
-                echo "<script>window.location = '/thank-you'</script>";
-            } else {
-                echo "Email not sent. " , $mail->ErrorInfo , PHP_EOL;
-
-                $mail->ClearAddresses();
-
-                $mail->addAddress($myEmail);
-
-                // The subject line of the email
-                $mail->Subject = 'Wiseup - Failed Email to Customer';
-
-                // The HTML-formatted body of the email
-                $mail->Body = "<p>Hi " . $customerName . ",</p>
-                    <p>Thanks for getting in touch with us!</p>
-                    <p>I'll get back to you as soon as possible regarding your enquiry.
-                    <br>Please don't hesitate to give me a call to reach me sooner.</p>
-                    <p>Here is a copy of your message:</p>
-                    <p>\"" . $message ."\"</p>
-                    <p>Thanks again<p>";
-            }
-        } else {
+        if (! $mail->send()) {
             echo "Email not sent. " , $mail->ErrorInfo , PHP_EOL;
 
             $mail->ClearAddresses();
@@ -194,7 +115,43 @@ if (!empty($_POST) && $captcha_success->success==true) {
                 <p>\"" . $message . "\"</p>
                 <p> You're welcome!</p>
                 <p><strong>Beep boop.</strong></p>";
+        } else {
+            $success = true;
         }
     }
 }
 ?>
+
+<div class="contact container">
+    <div class="col-lg-5 mx-auto col-md-8">
+    <div class="row">
+        <div class="contact__phone-number__container text-center">
+            <a href="tel:+61412325660"><i class="fas fa-phone"></i> +61 412 325 660</a>
+        </div>
+        <div class="contact__form__container">
+            <?php if (isset($success) && $success == true) { ?>
+                <p class="text-success">Thank you for your contact request. Your submission has been received</p>
+            <?php } ?>
+            <form id="contact-form" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name*" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name*" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email*" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" name="message" id="message" placeholder="Message*" required></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="6Lfdp38UAAAAAJUwvPlf-qC3Jfkvy7sN7SoAj6pQ"></div>
+                <input class="btn" type="submit" name="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+    </div>
+</div>

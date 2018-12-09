@@ -3,6 +3,7 @@
     <head>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124459791-1"></script>
+        <script src='https://www.google.com/recaptcha/api.js?render=6Lfdp38UAAAAAJUwvPlf-qC3Jfkvy7sN7SoAj6pQ'></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -62,24 +63,20 @@
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a href="/" class="navbar__logo"><img src="app/dist/images/logo.png"></a>
+                <div class="navbar__contact-links">
+                    <a href="tel:+61412-325-660" target="_blank"  class="navbar__phone-number"><i style="margin-right: 0.5rem;" class="fas fa-phone"></i>0412 325 660</a>
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="w-100">
-                    <div class="navbar__secondary">
-                        <div class="navbar__contact-links">
-                            <a href="tel:+61412-325-660" target="_blank"  class="navbar__phone-number"><i style="margin-right: 0.5rem;" class="fas fa-phone"></i>0412 325 660</a>
-                        </div>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <?php foreach($navItems as $item) { ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo ($item['url']) ?>"><?php echo $item['name'] ?></a>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <?php foreach($navItems as $item) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo ($item['url']) ?>"><?php echo $item['name'] ?></a>
+                        </li>
+                        <?php } ?>
+                    </ul>
                 </div>
             </div>
         </nav>

@@ -1,22 +1,33 @@
 .cta {
-    padding: 64px;
+    padding: 64px 0;
     text-align: center;
+    margin: 32px 0;
 
     &--grey {
         background-color: $grey;
+        margin-bottom: 0 !important;
     }
 
     &--blue {
         background-image: linear-gradient(to right, #373fff, #00fff0);
         text-align: left;
     }
+
+    @include media-breakpoint-up(md) {
+        margin: 64px 0;
+    }
 }
 
 .cta__heading {
     color: $white;
-    font-size: 58px;
+    font-size: 36px;
     font-weight: 300;
     margin-bottom: 16px;
+    line-height: 1.15;
+
+    @include media-breakpoint-up(md) {
+        font-size: 58px;
+    }
 }
 
 .cta__button {
@@ -24,14 +35,22 @@
     border-radius: 33px;
     color: $white;
     display: inline-block;
-    padding: 8px 24px;
-    font-size: 24px;
+    padding: 8px;
+    font-size: 16px;
     font-weight: 300;
+    width: 100%;
+    text-align: center;
 
     &:hover {
         color: $grey;
         background-color: $white;
         text-decoration: none;
         transition: $transition-base;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: 8px 48px;
+        font-size: 24px;
+        width: auto;
     }
 }
