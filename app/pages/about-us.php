@@ -21,14 +21,7 @@
             ); 
         ?>
     </div>
-    <div class="row staff__row">
-        <?php 
-            component_staff(
-                'Megan Keeffe',
-                'VA/Bookkeeping/Payroll',
-                'wiseup-megan.jpg'
-            );
-        ?>
+    <div class="row staff__row staff__row--tiles">
         <?php 
             component_staff(
                 'Sue Green',
@@ -52,7 +45,7 @@
             Our Mission
         </div>
         <div class="quote-block__body">
-        “Bookkeeping is the recording of financial transactions, and is part of the process of accounting in business.[1] Transactions include purchases, sales, receipts, and payments by an individual person or an organization/corporation. There are several standard methods of bookkeeping, such as the single-entry bookkeeping system “
+        “We value authenticity, trust & integrity. These drive our decision-making processes & underpin our commitment as your trusted advisory service for financial workflows, bookkeeping, payroll & financial reporting. Our Culture is based on an honest connection. We strive to fully understand your individual business needs and tailor our services to provide the best fit possible for you.“
         </div>
     </div>
 </div>

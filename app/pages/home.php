@@ -9,8 +9,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <!-- <h1>Learn To Love Your Figures</h1>
-                    <p>with Wiseup Bookkeeping</p> -->
                     <h1>Wiseup Bookkeeping</h1>
                     <p>Learn To Love Your Figures</p>
                 </div>
@@ -46,15 +44,15 @@
         <div class="col-12">
             <div>
                 <h2 class="color--purple">Personalised Approach</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>We understand no two businesses are the same and that your needs change over time. Discovery sessions, onsite meetings and annual reviews allow us to accommodate your individual business needs.</p>
             </div>
             <div>
                 <h2 class="color--purple">Meaningful Reporting</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Financial reporting is often confusing and too infrequent to provide accurate assessment of trends. We tailor customised management and financial reporting and provide education to empower owners.</p>
             </div>
             <div>
                 <h2 class="color--purple">Informed Decision Making</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>We believe in giving business owners the knowledge they need to effectively make decisions to grow their business. Our goal is to highlight positive and negative trends in the business so that owners can take appropriate action with clear insight.</p>
             </div>
         </div>
     </div>
@@ -63,17 +61,17 @@
 <div class="container global__padding">
     <div class="tiles">
         <?php
-            component_tile('Business Consulting & Analysis', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'pink', 'target-center-2');
+            component_tile('Business Consulting & Analysis', 'Strategic planning and problem solving, Human Resources Management, Marketing Strategies and Systems Analysis.', 'pink', 'target-center-2');
 
-            component_tile('Virtual Bookkeeping & BAS', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'dark-pink', 'package');
+            component_tile('Virtual Bookkeeping & BAS', 'Setup of Accounting Software, Receivables and Payables, Reconciliations, Financial reporting, BAS/IAS, Payroll, Superannuation and EOFY.', 'dark-pink', 'package');
 
-            component_tile('Virtual CFO & COO', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'purple', 'binocular');
+            component_tile('Virtual CFO & COO', 'Strategic Financial Planning, Cashflow Analysis, KPI Analysis, Budgeting, Designing and implementing business operations, Managing relationships with employees, partners and vendors.', 'purple', 'binocular');
 
-            component_tile('Virtual Administrative Support', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'light-blue', 'speech-person');
+            component_tile('Virtual Administrative Support', 'Email management, data entry, updating manuals and procedures, reporting, invoicing and other administrative duties.', 'light-blue', 'speech-person');
 
-            component_tile('Integrations Analysis & Implementation', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'blue', 'cog');
+            component_tile('Integrations Analysis & Implementation', 'Analysing internal workflow systems and procedures. Recommendations and implementing software solutions based upon analysis.', 'blue', 'cog');
 
-            component_tile('Financial Reporting & Analysis', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'dark-blue', 'analytics-graph-bar');
+            component_tile('Financial Reporting & Analysis', 'Tailored business financial reporting and analysis. Profit & Loss, Balance Sheets, Cash Flow, Job Costing, Sales, Inventory, Payroll, Payables.', 'dark-blue', 'analytics-graph-bar');
         ?>
     </div>
 </div>

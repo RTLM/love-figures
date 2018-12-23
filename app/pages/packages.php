@@ -7,7 +7,7 @@ include 'app/partials/head.php';
 <div class="banner banner--packages">
     <div class="banner__text container">
         <h1>Affordable bookkeeping packages for every business.</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>From sole traders to medium sized businesses, our packages accommodate your every need. We take the burden out of your books and give you clear insights to increase efficiency and maximise profitability.</p>
     </div>
     <div class="banner--overlay"></div>
 </div>
@@ -15,8 +15,6 @@ include 'app/partials/head.php';
 
 <div class="container">
     <div class="packages">
-        
-
 
 <?php
 
@@ -37,9 +35,9 @@ $features = [
 ];
 
 component_package(
-    'Fledgling',
+    'Reporting',
     '$249',
-    'package-1.png',
+    'reporting',
     'blue',
     $timeframe,
     $features
@@ -63,9 +61,9 @@ $features = [
     'Acccounts Receivable Management',
 ];
 component_package(
-    'Scout',
+    'Accounts',
     '$449',
-    'package-2.png',
+    'accounts',
     'purple',
     $timeframe,
     $features
@@ -91,41 +89,13 @@ $features = [
     'Superannuation',
 ];
 component_package(
-    'Hunter',
+    'Payroll',
     '$799',
-    'package-3.png',
+    'payroll',
     'pink',
     $timeframe,
     $features
 );
-
-// $content = [
-//     'As above plus we cover all of your payable, receivables and compliance reporting',
-//     'Perfect for Small Businesses struggling to keep up with transactions and compliance'
-// ];
-// component_package(
-//     'Scout',
-//     '$449',
-//     'package-2.png',
-//     $content,
-//     'Includes above package plus',
-//     $includes
-// );
-
-// $content = [
-//     'As above plus Payroll, Payroll Tax, Superannuation and Management Reporting',
-//     'Saving time, money and resources through Monthly Management Insights Reporting', 
-//     'Perfect for Small-Medium size businesses with Bookkeeping, Payroll and Payroll tax taken care of'
-// ];
-// component_package(
-//     'Hunter',
-//     '$799',
-//     'package-3.png',
-//     $content,
-//     'Includes above packages plus',
-//     $includes
-// );
-
 ?> 
 
     </div>

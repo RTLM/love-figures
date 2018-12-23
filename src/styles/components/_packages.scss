@@ -95,6 +95,16 @@
     box-shadow: #999 0 1px 15px -5px;
     flex-direction: column;
     margin-bottom: 2rem;
+
+    svg {
+        height: 75px;
+        width: auto;
+
+        * {
+            stroke: #959494 !important;
+            stroke-width: 1px !important;
+        }
+    }
 }
 
 .package__feature {

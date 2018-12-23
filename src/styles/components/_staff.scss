@@ -3,7 +3,17 @@
     margin: 0 15px;
 
     @include media-breakpoint-up(md) {
-        justify-content: space-between;
+        justify-content: flex-start;
+    }
+
+    &--tiles {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
@@ -14,7 +24,10 @@
 
     &--secondary {
         text-align: center;
-        max-width: 250px;
+
+        &:first-child {
+            margin-right: 36px;
+        }
     }
 
     &--primary {
@@ -29,8 +42,6 @@
 
     @include media-breakpoint-up(md) {
         &--secondary {
-            max-width: 250px;
-
             .staff__photo__container {
                 margin-bottom: 8px;
             }

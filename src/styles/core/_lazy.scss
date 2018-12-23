@@ -82,28 +82,40 @@
 }
 
 .color {
-    &--pink {
+    &--pink,
+    &--pink * {
         color: $pink;
+        stroke: $pink !important;
     }
 
-    &--dark-pink {
+    &--dark-pink,
+    &--dark-pink * {
         color: $dark-pink;
+        stroke: $dark-pink !important;
     }
 
-    &--purple {
+    &--purple,
+    &--purple * {
         color: $purple;
+        stroke: $purple !important;
     }
 
-    &--light-blue {
+    &--light-blue,
+    &--light-blue * {
         color: $light-blue;
+        stroke: $light-blue !important;
     }
 
-    &--blue {
+    &--blue,
+    &--blue * {
         color: $blue;
+        stroke: $blue !important;
     }
 
-    &--dark-blue {
+    &--dark-blue,
+    &--dark-blue * {
         color: $dark-blue;
+        stroke: $dark-blue !important;
     }
 }
 

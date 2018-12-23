@@ -1,6 +1,9 @@
 <div class="package">
     <div class="package__header">
-        <img src="app/dist/images/<?php echo $image; ?>" class="img-fluid rounded-circle mx-auto package__image" alt="<?php echo $title ?>">
+        <div class="">
+            <?php echo file_get_contents('app/dist/svgs/' . $image . '.svg'); ?>
+        </div>
+        <!-- <img src="app/dist/images/<?php echo $image; ?>" class="img-fluid rounded-circle mx-auto package__image" alt="<?php echo $title ?>"> -->
         <p class="package__title color--<?php echo $colour ?>"><?php echo $title ?></p>
         <div class="package__price">
             <p><?php echo $price; ?></p>
