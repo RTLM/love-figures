@@ -1,11 +1,9 @@
 <?php include 'app/partials/head.php'; ?>
-
-<div class="container">
-    <div class="row separator">
-        <div class="col">
-            <h1 class="heading">Thank you for getting in contact with Wiseup Bookkeeping!</h1>
-        </div>
+<div class="banner banner--packages">
+    <div class="banner__text container">
+        <h1>Thank you for getting in contact with Wiseup Bookkeeping!</h1>
     </div>
+    <div class="banner--overlay"></div>
 </div>
 
 <?php include 'app/partials/footer.php'; ?>

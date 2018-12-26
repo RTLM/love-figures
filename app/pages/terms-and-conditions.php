@@ -1,9 +1,15 @@
 <?php include 'app/partials/head.php'; ?>
 
+<div class="banner banner--about-us">
+    <div class="banner__text container">
+        <h1>Wise-Up Bookkeeping Terms & Conditions</h1>
+    </div>
+    <div class="banner--overlay"></div>
+</div>
+
 <div class="container">
     <div class="row separator">
         <div class="col">
-            <h1 class="heading">Wise-Up Bookkeeping Terms & Conditions</h1>
             <ul>
                 <li>All documents & financial statements prepared for you and any documents supplied by you, will remain your property. Any documents/systems we prepare on your behalf will remain our property at all times.</li>
                 <li>Packages are invoiced on the 1st of each month in advance and must be paid as per our trade terms set out on our invoices within 7 days. Payment must be made by direct transfer or credit card.</li>
