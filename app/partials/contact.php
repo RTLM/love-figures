@@ -1,111 +1,76 @@
 <?php
 if (!empty($_POST)) {
-$token = $_POST['token'];
-$secret = '6Lfdp38UAAAAAChKOWxiMHzWlMhO4nHjLucYu-At';
-$action = $_POST['action'];
+    $token = $_POST['token'];
+    $secret = '6Lfdp38UAAAAAChKOWxiMHzWlMhO4nHjLucYu-At';
+    $action = $_POST['action'];
 
-$url = 'https://www.google.com/recaptcha/api/siteverify';
-$data = array(
-    'secret' => '6Lfdp38UAAAAAChKOWxiMHzWlMhO4nHjLucYu-At',
-    'response' => $_POST['token']
-);
-$options = array(
-    'http' => array (
-        'method' => 'POST',
-        'content' => http_build_query($data)
-    )
-);
-$context  = stream_context_create($options);
-$verify = file_get_contents($url, false, $context);
-$response = json_decode($verify);
-}
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $data = array(
+        'secret' => '6Lfdp38UAAAAAChKOWxiMHzWlMhO4nHjLucYu-At',
+        'response' => $_POST['token']
+    );
+    $options = array(
+        'http' => array (
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        )
+    );
+    $context  = stream_context_create($options);
+    $verify = file_get_contents($url, false, $context);
+    $response = json_decode($verify);
 
-if (!empty($_POST) && $response->success == true && $response->score > 0.5 && $response->action == 'submit_form') {
-    if (!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']) && !empty($_POST['message'])) {
-        // Modify the path in the require statement below to refer to the 
-        // location of your Composer autoload.php file.
-        require __DIR__ . '/../../vendor/autoload.php';
+    if ($response->success == true && $response->score > 0.5 && $response->action == 'submit_form') {
+        if (!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['email']) && !empty($_POST['message'])) {
+            // Modify the path in the require statement below to refer to the 
+            // location of your Composer autoload.php file.
+            require __DIR__ . '/../../vendor/autoload.php';
 
-        // $adminEmail = 'bookkeeping@wiseupconnect.com.au';
-        $adminEmail = 'joshrussellahern@gmail.com';
-        $myEmail = 'joshrussellahern@gmail.com';
+            // $adminEmail = 'bookkeeping@wiseupconnect.com.au';
+            $adminEmail = 'joshrussellahern@gmail.com';
+            $myEmail = 'joshrussellahern@gmail.com';
 
 
-        $customerEmail = $_POST['email'];
-        $customerName =  $_POST['firstname'] . " " . $_POST['lastname'];
-        $message = $_POST['message'];
-        $footer = file_get_contents('/../partials/email-footer.html');
+            $customerEmail = $_POST['email'];
+            $customerName =  $_POST['firstname'] . " " . $_POST['lastname'];
+            $message = $_POST['message'];
+            $footer = file_get_contents('/../partials/email-footer.html');
 
-        // Instantiate a new PHPMailer 
-        $mail = new PHPMailer;
+            // Instantiate a new PHPMailer 
+            $mail = new PHPMailer;
 
-        // Tell PHPMailer to use SMTP
-        $mail->isSMTP();
+            // Tell PHPMailer to use SMTP
+            $mail->isSMTP();
 
-        $mail->AddReplyTo($customerEmail, 'Reply to ' . $customerName);
+            $mail->AddReplyTo($customerEmail, 'Reply to ' . $customerName);
 
-        // Replace sender@example.com with your "From" address. 
-        // This address must be verified with Amazon SES.
-        $mail->setFrom($adminEmail, 'Wiseup Bookkeeping');
+            // Replace sender@example.com with your "From" address. 
+            // This address must be verified with Amazon SES.
+            $mail->setFrom($adminEmail, 'Wiseup Bookkeeping');
 
-        // Replace recipient@example.com with a "To" address. If your account 
-        // is still in the sandbox, this address must be verified.
-        // Also note that you can include several addAddress() lines to send
-        // email to multiple recipients.
-        $mail->addAddress($adminEmail,  'Wiseup Bookkeeping');
-        $mail->addCC($myEmail, 'Web Admin');
+            // Replace recipient@example.com with a "To" address. If your account 
+            // is still in the sandbox, this address must be verified.
+            // Also note that you can include several addAddress() lines to send
+            // email to multiple recipients.
+            $mail->addAddress($adminEmail,  'Wiseup Bookkeeping');
+            $mail->addCC($myEmail, 'Web Admin');
 
-        // Replace smtp_username with your Amazon SES SMTP user name.
-        $mail->Username = 'AKIAJLVTBBZZM6WRIWMQ';
+            // Replace smtp_username with your Amazon SES SMTP user name.
+            $mail->Username = 'AKIAJLVTBBZZM6WRIWMQ';
 
-        // Replace smtp_password with your Amazon SES SMTP password.
-        $mail->Password = 'AsFePQ886ZCrdiy/dZFQChbQxqjr5QCyzE9+t5G9CH8w';
+            // Replace smtp_password with your Amazon SES SMTP password.
+            $mail->Password = 'AsFePQ886ZCrdiy/dZFQChbQxqjr5QCyzE9+t5G9CH8w';
+                
+            // Specify a configuration set. If you do not want to use a configuration
+            // set, comment or remove the next line.
+            // $mail->addCustomHeader('X-SES-CONFIGURATION-SET', 'ConfigSet');
             
-        // Specify a configuration set. If you do not want to use a configuration
-        // set, comment or remove the next line.
-        // $mail->addCustomHeader('X-SES-CONFIGURATION-SET', 'ConfigSet');
-         
-        // If you're using Amazon SES in a region other than US West (Oregon), 
-        // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP  
-        // endpoint in the appropriate region.
-        $mail->Host = 'email-smtp.us-west-2.amazonaws.com';
-
-        // The subject line of the email
-        $mail->Subject = 'New email enquiry from ' . $customerName;
-
-        // The HTML-formatted body of the email
-        $mail->Body = "<p><strong>Beep Boop,</strong></p>
-            <p>Hi Mary,</p>
-            <p>Another email enquiry has arrived from www.wiseupconnect.com.au</p>
-            <p>From: " . $customerName . " at " . $customerEmail ."</p>
-            <p>\"" . $message . "\"</p>
-            <p> You're welcome!</p>
-            <p><strong>Beep boop.</strong></p>";
-
-        // Tells PHPMailer to use SMTP authentication
-        $mail->SMTPAuth = true;
-
-        // Enable TLS encryption over port 587
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
-
-        // Tells PHPMailer to send HTML-formatted email
-        $mail->isHTML(true);
-
-        // The alternative email body; this is only displayed when a recipient
-        // opens the email in a non-HTML email client. The \r\n represents a 
-        // line break.
-        $mail->AltBody = "New contact request from: " . $customerEmail . " \r\n" . $message;
-
-        if (! $mail->send()) {
-            echo "Email not sent. " , $mail->ErrorInfo , PHP_EOL;
-
-            $mail->ClearAddresses();
-
-            $mail->addAddress($myEmail);
+            // If you're using Amazon SES in a region other than US West (Oregon), 
+            // replace email-smtp.us-west-2.amazonaws.com with the Amazon SES SMTP  
+            // endpoint in the appropriate region.
+            $mail->Host = 'email-smtp.us-west-2.amazonaws.com';
 
             // The subject line of the email
-            $mail->Subject = 'Wiseup - Failed Email to Mary';
+            $mail->Subject = 'New email enquiry from ' . $customerName;
 
             // The HTML-formatted body of the email
             $mail->Body = "<p><strong>Beep Boop,</strong></p>
@@ -115,8 +80,43 @@ if (!empty($_POST) && $response->success == true && $response->score > 0.5 && $r
                 <p>\"" . $message . "\"</p>
                 <p> You're welcome!</p>
                 <p><strong>Beep boop.</strong></p>";
-        } else {
-            $success = true;
+
+            // Tells PHPMailer to use SMTP authentication
+            $mail->SMTPAuth = true;
+
+            // Enable TLS encryption over port 587
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 587;
+
+            // Tells PHPMailer to send HTML-formatted email
+            $mail->isHTML(true);
+
+            // The alternative email body; this is only displayed when a recipient
+            // opens the email in a non-HTML email client. The \r\n represents a 
+            // line break.
+            $mail->AltBody = "New contact request from: " . $customerEmail . " \r\n" . $message;
+
+            if (! $mail->send()) {
+                echo "Email not sent. " , $mail->ErrorInfo , PHP_EOL;
+
+                $mail->ClearAddresses();
+
+                $mail->addAddress($myEmail);
+
+                // The subject line of the email
+                $mail->Subject = 'Wiseup - Failed Email to Mary';
+
+                // The HTML-formatted body of the email
+                $mail->Body = "<p><strong>Beep Boop,</strong></p>
+                    <p>Hi Mary,</p>
+                    <p>Another email enquiry has arrived from www.wiseupconnect.com.au</p>
+                    <p>From: " . $customerName . " at " . $customerEmail ."</p>
+                    <p>\"" . $message . "\"</p>
+                    <p> You're welcome!</p>
+                    <p><strong>Beep boop.</strong></p>";
+            } else {
+                $success = true;
+            }
         }
     }
 }

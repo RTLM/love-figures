@@ -35,6 +35,7 @@
         <link rel="stylesheet" type="text/css" href="app/dist/main.css">
         <?php include 'app/functions.php' ?>
 
+
         <title>Learn to Love Your Figures</title>
     </head>
     <body>
